@@ -8,4 +8,4 @@ param($installPath, $toolsPath, $package, $project)
 # $project is a reference to the project the package was installed to.
 
 # Removes dummy content text file which is used only to make this nuget package to work on project scope level.
-$project.ProjectItems | where {$_.Name -eq "MSBuild.WebApplication.CopyContentLinkedFiles.Dummy.txt"} | ForEach-Object { $_.Remove() }
+$project.ProjectItems | where {$_.Name -eq "MSBuild.WebApplication.CopyContentLinkedFiles.Dummy.txt"} | ForEach-Object { $_.Delete() }
